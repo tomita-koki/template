@@ -18,7 +18,7 @@
     position: relative;
     overflow: hidden;
     width: 100%;
-    background: url("/images/img-dummy.png") center center / cover no-repeat;
+    background: url("/template/images/img-dummy.png") center center / cover no-repeat;
   }
 
   &__content {
@@ -67,7 +67,7 @@
       display: inline-block;
       width: 32px;
       height: 32px;
-      background: url("/images/img-arrow.png") center center / cover no-repeat;
+      background: url("/template/images/img-arrow.png") center center / cover no-repeat;
     }
   }
 
