@@ -1,0 +1,135 @@
+@use '../../_foundation/' as *;
+
+.fp-lyt-media {
+    $_this: &;
+  
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px 40px;
+  
+      @include media-query {
+        flex-direction: row;
+      }
+    }
+  
+    &--reverse {
+      #{$_this}__inner {
+        flex-direction: column-reverse;
+  
+        @include media-query {
+          flex-direction: row-reverse;
+        }
+      }
+    }
+}
+
+.m-lyt-media {
+  $_this: &;
+  margin-bottom: 40px;
+  @include media-query {
+    margin-bottom: 80px;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    
+    @include media-query {
+      flex-direction: row;
+      gap: 32px;
+    }
+  }
+
+  &--reverse {
+    #{$_this}__inner {
+      flex-direction: column-reverse;
+
+      @include media-query {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+  &__text {
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    
+    @include media-query {
+      width: 50%;
+      text-align: left;
+    }
+  }
+
+  &__media {
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    
+    @include media-query {
+      width: 50%;
+      text-align: right;
+    }
+  }
+}
+
+.m-lyt-column {
+  $_this: &;
+
+  margin-bottom: 40px;
+  @include media-query {
+    margin-bottom: 80px;
+  }
+
+  &__inner {
+    display: grid;
+    grid-row-gap: 64px;
+    justify-items: center;
+
+    @include media-query {
+      grid-column-gap: 32px;
+      grid-row-gap: 64px;
+    }
+
+    & > * {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item {
+    width: 100%;
+  }
+}
+
+.m-lyt-column[data-column="1"] {
+  .m-lyt-column__inner {
+    grid-template-columns: 1fr;
+    @include media-query {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+
+.m-lyt-column[data-column="2"] {
+  .m-lyt-column__inner {
+    grid-template-columns: 1fr;
+    @include media-query {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+.m-lyt-column[data-column="3"] {
+  .m-lyt-column__inner {
+    grid-template-columns: 1fr;
+    @include media-query {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (min-width: 1000px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

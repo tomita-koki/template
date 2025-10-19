@@ -1,0 +1,21 @@
+@use '../../_foundation/' as *;
+
+.no-gap {
+    gap: 0;
+}
+
+.no-top {
+    margin-top: 0 !important;
+}
+
+.no-bottom {
+    margin-bottom: 0 !important;
+}
+
+.no-left {
+    margin-left: 0 !important;
+}
+
+.no-right {
+    margin-right: 0 !important;
+}
