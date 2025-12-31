@@ -1,7 +1,6 @@
 @use './_base/' as *;
 @use './_foundation/' as *;
 @use './_mlc/' as *;
-@use './_omikuji.scss' as *;
 @use './_figma.scss' as *;
 
 .body {
@@ -400,4 +399,8 @@
   &__text {
     font-size: 18px;
   }
+}
+
+.test {
+  color: red;
 }
